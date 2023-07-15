@@ -5,9 +5,9 @@
 /**
  * main - Entry point
  *
- * Description: This code prints the last digit of the number stored in the variable 'n'
+ * Description: This program prints the last digit of the random number stored in 'n'.
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
