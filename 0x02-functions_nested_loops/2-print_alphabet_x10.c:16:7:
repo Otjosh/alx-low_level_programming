@@ -1,0 +1,18 @@
+ = ('a)';
+      |       ^~~~
+2-print_alphabet_x10.c:16:11: error: expected ‘)’ before ‘;’ token
+   16 | ch = ('a)';
+      |      ~    ^
+      |           )
+2-print_alphabet_x10.c:16:6: error: overflow in conversion from ‘int’ to ‘char’ changes value from ‘24873’ to ‘41’ [-Werror=overflow]
+   16 | ch = ('a)';
+      |      ^
+2-print_alphabet_x10.c:23:5: error: expected ‘;’ before ‘}’ token
+   23 | i++;
+      |     ^
+      |     ;
+   24 | }
+      | ~    
+2-print_alphabet_x10.c:9:6: error: variable ‘ch’ set but not used [-Werror=unused-but-set-variable]
+    9 | char ch;
+      |      ^~
