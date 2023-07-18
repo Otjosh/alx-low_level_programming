@@ -3,9 +3,11 @@
 #include <time.h>
 
 /**
- * main - Entry point,
+ * main - Entry point, assigns a random number to 'n' and prints its last digit.
  *
- * Description: This program generates a random number and stores it
+ * Description: This program generates a random number and stores it in the variable 'n'.
+ *              It then prints the last digit of the number and provides additional information
+ *              about the last digit, such as whether it is greater than 5, 0, or less than 6.
  *
  * Return: Always 0 (Success)
  */
@@ -16,7 +18,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	printf("Last digit of %d is", n);
+	printf("Last digit of %d is %d", n, n % 10);
 
 	if (n % 10 > 5)
 		printf(" and is greater than 5\n");
