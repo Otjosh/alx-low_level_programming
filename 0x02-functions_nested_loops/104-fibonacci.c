@@ -6,17 +6,17 @@
  */
 void print_fibonacci(void)
 {
-unsigned long int a = 1, b = 2, c;
+unsigned long int prev = 1, current = 2, next;
 
-printf("%lu", a);
+printf("%lu", prev);
 
 for (int i = 2; i <= 98; i++)
 {
-printf(", %lu", b);
+printf(", %lu", current);
 
-c = a + b;
-a = b;
-b = c;
+next = prev + current;
+prev = current;
+current = next;
 }
 
 printf("\n");
@@ -25,5 +25,5 @@ printf("\n");
 int main(void)
 {
 print_fibonacci();
-return (0);
+return 0;
 }
