@@ -3,19 +3,21 @@
 
 /**
  * main - Entry point
+ *
  * Description: Finds and prints the first 98 Fibonacci numbers,
- *              starting with 1 and 2, followed by a new line,
- *              separated by a comma and a space.
- * Return: Always 0 (Success)
+ * starting with 1 and 2, followed by a new line.
+ * The numbers are separated by a comma, followed by a space.
+ *
+ * * Return: Always 0 (Success)
  */
 int main(void)
 {
-int n = 98;
 unsigned long int prev = 1, current = 2, next = 0;
+int count;
 
 printf("%lu, %lu", prev, current);
 
-for (int i = 2; i < n; i++)
+for (count = 3; count <= 98; count++)
 {
 next = prev + current;
 printf(", %lu", next);
