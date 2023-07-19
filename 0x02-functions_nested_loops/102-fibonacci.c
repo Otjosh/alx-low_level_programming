@@ -1,37 +1,41 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
- * Description: Prints the first 50 Fibonacci numbers,
- *              separated by a comma and a space, followed by a new line.
+ * Description: Prints the first 98 Fibonacci numbers, starting with 1 and 2,
+ * followed by a new line.
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-int n = 50;
-int fib[n];
+int n = 98;
+unsigned long int *fib;
 int i;
 
-/* First two Fibonacci numbers */
+fib = malloc((n + 1) * sizeof(unsigned long int));
+if (fib == NULL)
+{
+printf("Memory allocation failed!\n");
+return (1);
+}
+
 fib[0] = 1;
 fib[1] = 2;
 
-/* Compute the rest of the Fibonacci numbers */
-for (i = 2; i < n; i++)
+for (i = 2; i <= n; i++)
 {
 fib[i] = fib[i - 1] + fib[i - 2];
 }
 
-/* Print the Fibonacci numbers separated by comma and space */
-
-for (i = 0; i < n - 1; i++)
+for (i = 0; i < n; i++)
 {
-printf("%d, ", fib[i]);
+printf("%lu, ", fib[i]);
 }
 
-/* Print the last Fibonacci number followed by a new line */
-printf("%d\n", fib[n - 1]);
+printf("%lu\n", fib[n]);
+
+free(fib);
 
 return (0);
 }
