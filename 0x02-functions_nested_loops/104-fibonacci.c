@@ -1,29 +1,29 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
- * print_fibonacci - Prints the first 98 Fibonacci numbers.
+ * main - Entry point
+ *
+ * Description: Finds and prints the first 98 Fibonacci numbers,
+ *              starting with 1 and 2, followed by a new line,
+ *              separated by a comma and a space.
+ *
+ * Return: Always 0 (Success)
  */
-void print_fibonacci(void)
-{
-unsigned long int prev = 1, current = 2, next;
-
-printf("%lu", prev);
-
-for (int i = 2; i <= 98; i++)
-{
-printf(", %lu", current);
-
-next = prev + current;
-prev = current;
-current = next;
-}
-
-printf("\n");
-}
-
 int main(void)
 {
-print_fibonacci();
-return 0;
+	unsigned long int prev = 1, current = 2, next;
+
+	printf("%lu, %lu", prev, current);
+
+	for (int i = 2; i <= 98; i++)
+	{
+		next = prev + current;
+		printf(", %lu", next);
+
+		prev = current;
+		current = next;
+	}
+
+	printf("\n");
+	return (0);
 }
