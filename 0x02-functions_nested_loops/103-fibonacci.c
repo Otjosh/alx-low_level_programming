@@ -4,17 +4,19 @@
 /**
  * main - Entry point of the program
  *
- * Description: Finds the sum of even-valued terms in the Fibonacci sequence
- *              whose values do not exceed 4,000,000 and prints the sum.
+ * Description: Calculates and prints the sum of even-valued terms
+ *              in the Fibonacci sequence, up to 4,000,000.
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-long int a = 1;
-long int b = 2;
-long int c;
-long int sum = 2;
+unsigned long int a, b, c, sum;
+
+a = 1;
+b = 2;
+sum = 2;
 
 while (1)
 {
@@ -29,7 +31,6 @@ a = b;
 b = c;
 }
 
-printf("Sum of even-valued terms in Fibonacci sequence: %ld\n", sum);
-
+printf("%lu\n", sum);
 return (0);
 }
