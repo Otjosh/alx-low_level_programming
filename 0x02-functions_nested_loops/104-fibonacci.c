@@ -15,7 +15,9 @@ int main(void)
 
 	printf("%lu, %lu", prev, current);
 
-	for (int i = 2; i <= 98; i++)
+	int i;
+
+	for (i = 2; i <= 98; i++)
 	{
 		next = prev + current;
 		printf(", %lu", next);
