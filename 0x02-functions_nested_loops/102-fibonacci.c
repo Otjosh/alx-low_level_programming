@@ -2,38 +2,31 @@
 #include <stdio.h>
 
 /**
- * print_fibonacci - Prints the first 98 Fibonacci numbers
+ * print_fibonacci - Prints the first 50 Fibonacci numbers
  */
 void print_fibonacci(void)
 {
-    unsigned long int a, b, c;
-    int count;
+unsigned long int a, b, c;
+int count;
 
-    a = 0;
-    b = 1;
-    count = 0;
+a = 1;
+b = 2;
 
-    while (count < 98)
-    {
-        c = a + b;
-        printf("%lu", c);
+printf("%lu, %lu", a, b);
 
-        if (count != 97)
-        {
-            putchar(',');
-            putchar(' ');
-        }
+for (count = 2; count < 50; count++)
+{
+c = a + b;
+printf(", %lu", c);
+a = b;
+b = c;
+}
 
-        a = b;
-        b = c;
-        count++;
-    }
-
-    putchar('\n');
+printf("\n");
 }
 
 int main(void)
 {
-    print_fibonacci();
-    return 0;
+print_fibonacci();
+return (0);
 }
