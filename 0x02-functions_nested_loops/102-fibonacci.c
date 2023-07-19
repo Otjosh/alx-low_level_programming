@@ -1,34 +1,39 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Description: Prints the first 98 Fibonacci numbers,
- * starting with 1 and 2, followed by a new line.
- * The numbers are separated by comma, followed by a space.
- *
- * Return: Always 0 (Success)
+ * print_fibonacci - Prints the first 98 Fibonacci numbers
  */
-int main(void)
+void print_fibonacci(void)
 {
-unsigned long int a, b, c, count;
-a = 1;
-b = 2;
-count = 2;
+    unsigned long int a, b, c;
+    int count;
 
-printf("%lu, %lu", a, b);
+    a = 0;
+    b = 1;
+    count = 0;
 
-while (count < 98)
-{
-c = a + b;
-printf(", %lu", c);
+    while (count < 98)
+    {
+        c = a + b;
+        printf("%lu", c);
 
-a = b;
-b = c;
-count++;
+        if (count != 97)
+        {
+            putchar(',');
+            putchar(' ');
+        }
+
+        a = b;
+        b = c;
+        count++;
+    }
+
+    putchar('\n');
 }
 
-printf("\n");
-return (0);
+int main(void)
+{
+    print_fibonacci();
+    return 0;
 }
