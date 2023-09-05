@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strncat - concatenate two strings
  * using at most n bytes from src
@@ -8,11 +9,11 @@
  *
  * Return: dest
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 	int j;
-
 
 	i = 0;
 	while (dest[i] != '\0')
